@@ -1,0 +1,32 @@
+{
+  "name": "voice-transcription-app",
+  "version": "1.0.0",
+  "description": "Production-ready voice transcription app with user management and real-time processing",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\"",
+    "build": "npm run install-deps && cd frontend && npm run build && cp -r build ../backend/public",
+    "install-deps": "cd backend && npm install && cd ../frontend && npm install",
+    "railway-build": "npm run build",
+    "postinstall": "npm run install-deps"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "voice-transcription",
+    "openai-whisper",
+    "react",
+    "nodejs",
+    "websocket",
+    "user-management"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterpanc/voice-transcription-app.git"
+  }
+}
